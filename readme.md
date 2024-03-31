@@ -1,5 +1,4 @@
-## How To Build A, B Server
+## Use Dokcer Compose To Build Up Test Environment
 ```
-docker build -t a-server ./aServer/.
-docker build -t b-server ./bServer/.
+docker compose up -d
 ```
