@@ -1,0 +1,18 @@
+# 使用 Node.js 16 Alpine 版本作為基礎映像檔
+FROM node:16-alpine
+
+# 建立工作目錄
+WORKDIR /app
+
+# 複製專案檔案到工作目錄
+COPY package*.json ./
+COPY app.js ./
+
+# 安裝專案相依套件
+RUN npm install
+
+# 公開 A 伺服器所使用的埠號
+EXPOSE 8188
+
+# 啟動 A 伺服器
+CMD ["node", "app.js"]
