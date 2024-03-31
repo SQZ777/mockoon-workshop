@@ -4,7 +4,7 @@ const axios = require('axios');
 const app = express();
 
 
-const B_SERVER_URL = process.env.B_SERVER_URL || 'http://localhost:8188';
+const B_SERVER_URL = process.env.B_SERVER_URL
 
 app.get('/sorted-products', async (req, res) => {
   try {
