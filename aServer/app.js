@@ -2,6 +2,7 @@ const express = require('express');
 const axios = require('axios');
 const app = express();
 
+
 const B_SERVER_URL = process.env.B_SERVER_URL || 'http://localhost:3000';
 
 app.get('/sorted-products', async (req, res) => {
