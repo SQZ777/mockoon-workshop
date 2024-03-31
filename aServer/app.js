@@ -1,9 +1,10 @@
 const express = require('express');
+require('dotenv').config();
 const axios = require('axios');
 const app = express();
 
 
-const B_SERVER_URL = process.env.B_SERVER_URL || 'http://localhost:3000';
+const B_SERVER_URL = process.env.B_SERVER_URL || 'http://localhost:8188';
 
 app.get('/sorted-products', async (req, res) => {
   try {
@@ -33,6 +34,6 @@ app.get('/sorted-products', async (req, res) => {
   }
 });
 
-app.listen(4000, () => {
-  console.log('A Server is running on port 4000');
+app.listen(8187, () => {
+  console.log('A Server is running on port 8187');
 });
