@@ -80,15 +80,7 @@
           "filePath": "",
           "databucketID": "",
           "sendFileAsBody": false,
-          "rules": [
-            {
-              "target": "query",
-              "modifier": "specialCode",
-              "value": "",
-              "invert": false,
-              "operator": "null"
-            }
-          ],
+          "rules": [],
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
@@ -97,7 +89,7 @@
           "callbacks": []
         }
       ],
-      "responseMode": "FALLBACK"
+      "responseMode": null
     }
   ],
   "rootChildren": [
