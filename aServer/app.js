@@ -8,7 +8,11 @@ const B_SERVER_URL = process.env.B_SERVER_URL
 
 app.get('/sorted-products', async (req, res) => {
   try {
-    const { data: products } = await axios.get(`${B_SERVER_URL}/products`);
+    let bServiceUrl = `${B_SERVER_URL}/products`
+    if (req.query.specialCode) {
+      bServiceUrl = `${B_SERVER_URL}/products?specialCode=${req.query.specialCode}`
+    }
+    const { data: products } = await axios.get(bServiceUrl);
     const sortBy = req.query.sort;
 
     if (sortBy === 'price') {
