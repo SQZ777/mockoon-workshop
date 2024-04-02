@@ -1,7 +1,6 @@
 version: '3'
 
 services:
-
   a-server:
     build:
       context: ./aServer
@@ -9,13 +8,22 @@ services:
     ports:
       - "8187:8187"
     environment:
-      - B_SERVER_URL=http://b-server:8188
+      # - B_SERVER_URL=http://mockoon-server:7188
+      - B_SERVER_URL=http://host.docker.internal:6001
+      # - B_SERVER_URL=http://b-server:8188
     depends_on:
       - b-server
 
   b-server:
     build:
-      context: ./aServer
+      context: ./bServer
       dockerfile: dockerfile
     ports:
       - "8188:8188"
+
+  mockoon-server:
+    build:
+      context: ./mockoonServer
+      dockerfile: dockerfile
+    ports:
+      - "7188:7188"
