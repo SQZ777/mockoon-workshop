@@ -89,7 +89,7 @@
           "callbacks": []
         }
       ],
-      "responseMode": null
+      "responseMode": "FALLBACK"
     }
   ],
   "rootChildren": [
