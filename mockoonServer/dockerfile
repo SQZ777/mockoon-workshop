@@ -1,0 +1,8 @@
+FROM node:18-alpine
+WORKDIR /mockoon-rules
+COPY ./mockoonWorkShop.json ./mockoonWorkShop.json
+RUN npm install -g @mockoon/cli@7.0.0
+
+CMD ["mockoon-cli", "start", \
+"--data", "/mockoon-rules/mockoonWorkShop.json", \
+"--port", "7188"]
