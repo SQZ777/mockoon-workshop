@@ -46,7 +46,7 @@
       "responses": [
         {
           "uuid": "29f3f264-88d8-4039-9ff2-fbb6e657c812",
-          "body": "[\n  {\n    \"name\": \"product1-1\",\n    \"price\": 1,\n    \"description\": \"123456\"\n  },\n  {\n    \"name\": \"product1-2\",\n    \"price\": 1,\n    \"description\": \"1234567\"\n  },\n  {\n    \"name\": \"product2-1\",\n    \"price\": 2,\n    \"description\": \"1234567\"\n  },\n  {\n    \"name\": \"product2-2\",\n    \"price\": 2,\n    \"description\": \"12345678\"\n  },\n  {\n    \"name\": \"product3\",\n    \"price\": 3,\n    \"description\": \"123\"\n  }\n]",
+          "body": "[\n  {\n    \"name\": \"Guitar\",\n    \"price\": 5000,\n    \"description\": \"A classic acoustic guitar\"\n  },\n  {\n    \"name\": \"Piano\",\n    \"price\": 2000,\n    \"description\": \"A beautiful grand piano\"\n  },\n  {\n    \"name\": \"Drums\",\n    \"price\": 800,\n    \"description\": \"A complete drum set\"\n  },\n  {\n    \"name\": \"Violin\",\n    \"price\": 300,\n    \"description\": \"An elegant violin\"\n  },\n  {\n    \"name\": \"Trumpet\",\n    \"price\": 200,\n    \"description\": \"A shiny brass trumpet\"\n  },\n  {\n    \"name\": \"Saxophone\",\n    \"price\": 700,\n    \"description\": \"A smooth alto saxophone\"\n  },\n  {\n    \"name\": \"Flute\",\n    \"price\": 150,\n    \"description\": \"A melodious flute\"\n  },\n  {\n    \"name\": \"Cello\",\n    \"price\": 1200,\n    \"description\": \"A deep-toned cello\"\n  },\n  {\n    \"name\": \"Clarinet\",\n    \"price\": 400,\n    \"description\": \"A versatile clarinet\"\n  },\n  {\n    \"name\": \"Trombone\",\n    \"price\": 600,\n    \"description\": \"A powerful trombone\"\n  }\n]",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -80,7 +80,15 @@
           "filePath": "",
           "databucketID": "",
           "sendFileAsBody": false,
-          "rules": [],
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "specialCode",
+              "value": "",
+              "invert": false,
+              "operator": "null"
+            }
+          ],
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
