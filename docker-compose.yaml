@@ -9,8 +9,8 @@ services:
       - "8187:8187"
     environment:
       # - B_SERVER_URL=http://mockoon-server:7188
-      - B_SERVER_URL=http://host.docker.internal:6001
-      # - B_SERVER_URL=http://b-server:8188
+      # - B_SERVER_URL=http://host.docker.internal:6001
+      - B_SERVER_URL=http://b-server:8188
     depends_on:
       - b-server
 
